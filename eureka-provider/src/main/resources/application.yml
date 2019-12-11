@@ -1,0 +1,30 @@
+# \u7AEF\u53E3\u53F7
+server:
+  port: 7201
+# \u670D\u52A1\u540D\u79F0
+spring:
+  profiles: provider1
+  application:
+    name: eureka-provider
+# \u670D\u52A1\u6CE8\u518C\u4E0E\u53D1\u73B0\u76F8\u5173\u914D\u7F6E
+eureka:
+  client:
+    # \u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+    serviceUrl:
+      defaultZone: http://peer1:7101/eureka/,http://peer1:7102/eureka/,http://peer3:7103/eureka/
+---
+# \u7AEF\u53E3\u53F7
+server:
+  port: 7202
+# \u670D\u52A1\u540D\u79F0
+spring:
+  profiles: provider2
+  application:
+    name: eureka-provider
+# \u670D\u52A1\u6CE8\u518C\u4E0E\u53D1\u73B0\u76F8\u5173\u914D\u7F6E
+eureka:
+  client:
+    # \u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+    serviceUrl:
+      defaultZone: http://peer1:7101/eureka/,http://peer1:7102/eureka/,http://peer3:7103/eureka/
+
